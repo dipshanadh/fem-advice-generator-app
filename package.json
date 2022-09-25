@@ -1,0 +1,24 @@
+{
+	"name": "fem-advice-generator-app",
+	"version": "1.0.0",
+	"description": "Frontend Mentor | Advice generator app by Dipshan Adhikari",
+	"main": "script.js",
+	"scripts": {
+		"start": "npx tailwindcss -i ./main.css -o ./tailwind.css --watch",
+		"build": "npx tailwindcss -i ./main.css -o ./tailwind.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dipshanadh/fem-advice-generator-app.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/dipshanadh/fem-advice-generator-app/issues"
+	},
+	"homepage": "https://github.com/dipshanadh/fem-advice-generator-app#readme",
+	"devDependencies": {
+		"tailwindcss": "^3.1.8"
+	}
+}

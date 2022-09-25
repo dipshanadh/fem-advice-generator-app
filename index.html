@@ -12,34 +12,14 @@
 			content="Frontend Mentor | Advice generator app by Dipshan Adhikari"
 		/>
 
-		<link rel="icon" type="image/png" sizes="32x32" href="./images/" />
-		<script src="https://cdn.tailwindcss.com"></script>
-		<script>
-			tailwind.config = {
-				theme: {
-					extend: {
-						colors: {
-							lightCyan: "hsl(193, 38%, 86%)",
-							neonGreen: "hsl(150, 100%, 66%)",
-							grayishBlue: "hsl(217, 19%, 38%)",
-							darkGrayishBlue: "hsl(217, 19%, 24%)",
-							darkBlue: "hsl(218, 23%, 16%)",
-						},
-					},
-				},
-			}
-		</script>
-		<style>
-			@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap");
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-			* {
-				font-family: "Manrope", sans-serif;
-			}
-
-			#button:hover {
-				box-shadow: 0 0 20px hsl(150, 100%, 66%);
-			}
-		</style>
+		<link rel="stylesheet" href="./tailwind.css" />
 	</head>
 	<body class="bg-darkBlue p-8 grid min-h-screen place-items-center">
 		<main
@@ -63,7 +43,17 @@
 			>
 				<img src="./images/icon-dice.svg" alt="dice" />
 			</div>
-			<img src="./images/pattern-divider-desktop.svg" alt="line" />
+
+			<img
+				src="./images/pattern-divider-mobile.svg"
+				class="sm:hidden"
+				alt="line"
+			/>
+			<img
+				src="./images/pattern-divider-desktop.svg"
+				class="hidden sm:block"
+				alt="line"
+			/>
 		</main>
 		<script src="./script.js"></script>
 	</body>

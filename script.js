@@ -2,19 +2,18 @@ const button = document.getElementById("button"),
 	id = document.getElementById("id"),
 	advice = document.getElementById("advice")
 
-button.addEventListener("click", update)
-
-function update() {
+const update = async () => {
 	advice.textContent = "Loading advice..."
 	id.textContent = "advice"
 
-	fetch("https://api.adviceslip.com/advice")
-		.then(res => res.json())
-		.then(({ slip }) => {
-			id.textContent = `advice #${slip.id}`
-			advice.textContent = `"${slip.advice}"`
-		})
+	const res = await fetch("https://api.adviceslip.com/advice")
+	const data = await res.json()
+
+	const { slip } = data
+
+	id.textContent = `advice #${slip.id}`
+	advice.innerHTML = `<q>${slip.advice}</q>`
 }
 
+button.addEventListener("click", update)
 update()
-console.clear()
